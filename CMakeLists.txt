@@ -32,7 +32,7 @@ file(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/bin)
 # .exe, Append all src files to an env. var.
 FILE(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cpp
 ) 
-add_executable(${PROJECT_NAME} ${sources}) # Create executable
+add_executable(${PROJECT_NAME} ${sources} "src/algos.cpp" "src/algos.hpp") # Create executable
 set_target_properties(${PROJECT_NAME} PROPERTIES 
 	CXX_STANDARD_REQUIRED ON
 	CXX_EXTENSIONS OFF
